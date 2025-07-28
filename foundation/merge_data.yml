@@ -1,0 +1,87 @@
+#
+# configuration information for the merge_data.py script that joins FDO grant data, Carnegie naming data, and
+# Carnegie institution information
+#
+# DATA LOCATIONS:
+grant_data: /Users/lindseygulden/dev/leg-up-private/projects/foundation/data/compiled_grant_data.csv
+org_mapping_data: /Users/lindseygulden/dev/leg-up-private/projects/foundation/data/organization_names.csv
+carnegie_naming_data: /Users/lindseygulden/dev/leg-up-private/projects/foundation/will/data/metadata_csv/recipient_keys_cleaned.csv
+carnegie_data: /Users/lindseygulden/dev/leg-up-private/projects/foundation/data/carnegie_data_2025.csv
+grantmaker_data_file: /Users/lindseygulden/dev/leg-up-private/projects/foundation/data/propublica_ein_result_data_with_loc.csv
+school_location_file: /Users/lindseygulden/dev/leg-up-private/projects/foundation/data/school_locations.csv
+neighbor_states_info: /Users/lindseygulden/dev/leg-up-private/projects/foundation/data/neighbor_states.yml
+#
+# OUTPUT FILE INFO
+output_file: /Users/lindseygulden/dev/leg-up-private/projects/foundation/data/grant_recipient_linked.csv
+keep_only_open_higher_ed_orgs: True
+keep_only_definite_fossil_fuel: True
+min_grant_size: 15000
+#
+# CURRENCY CONVERSION YEAR:
+currency_year: 2024 # year for USD conversion
+#
+# COLUMN NAMES
+ein_col: &ein_alias ein  # we use an anchor and reference so that if you change this value it updates below, too
+# --- grant data file
+grant_year_col: year  # column name for grant data that specifies year that grant was awarded
+grant_grant_amt_col: grant_amount  # column name for grant data that specifies the grant amount (assumed in nominal USD)
+grant_recipient_col: recipient_original  # column in grant data file that is the original name given to the recipient
+# --- carnegie naming file
+multiple_institutions_bool_col: multiple_institutions
+univ_bool_col: is_univ_college
+# --- organization names file (recipient organizaitons)
+org_uid_col: unitid
+#
+# COLUMNS TO KEEP FOR GRANT DATA:
+grant_df_cols:   # columns from the grant_data dataframe to keep in final
+  - grantmaker
+  - recipient_original
+  - recipient_city
+  - recipient_state
+  - recipient_country
+  - primary_subject
+  - year
+  - grant_amount
+  - *ein_alias
+  - search_term
+  - full_name
+  - parent_organization
+  - corporate_foundation
+  - 501c6
+  - fossil_fuel_tied
+  - family
+  - foundation_name
+  - foundation_city
+  - foundation_state
+#
+# COLUMNS TO KEEP FOR GRANTMAKER DATA
+grantmaker_df_cols:
+  - search_term
+  - full_name
+  - parent_organization
+  - parent_city
+  - parent_state
+  - parent_country
+  - organization
+  - org_city
+  - org_state
+  - org_lat
+  - org_lon
+  - corporate_foundation
+  - 501c6
+  - fossil_fuel_tied
+  - us_company
+  - subsidiary
+  - family
+  - foundation_name
+  - foundation_city
+  - foundation_state
+  - *ein_alias
+#
+# COLUMNS ON WHICH TO MERGE GRANT DATA AND RECIPIENT ORGANIZATION INFORMATION
+cols_to_merge_grants_and_orgs:
+- recipient_original
+- recipient_city
+- recipient_state
+- recipient_country
+carnegie_df_cols: #columns from the grant_data dataframe to keep in final
