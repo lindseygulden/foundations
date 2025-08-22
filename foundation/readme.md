@@ -8,7 +8,7 @@ lindsey@legupdata.com
 ## Goals of Exploratory Analysis 
 1. Follow [written methods](https://docs.google.com/document/d/1buyLjLjZS6nLiO3q-SaqRHJx-6I5pSJta8Mqd8KzyY4/edit?usp=sharing) to roughly reproduce foundation-grant tabulation results and understand data provenance and potential limitations of methods.
 2. Link resulting grant information to information about grant recipients (i.e., schools)
-2. Identify methods to quantify likely strategy of fossil fuel foundations in funding academia
+3. Identify methods to quantify likely strategy of fossil fuel foundations in funding academia
 
 ## Recommendations/observations:
 0. Data management recommendation: Leverage foundations' unique EIN for better tracking of institutions and merging of data
@@ -16,8 +16,8 @@ lindsey@legupdata.com
 2. Recommend the inclusion of petrochemical companies' foundations; petrochemical companies and petroleum companies are two sides of the same coin (and are often vertically integrated within the same corporation)
 3. Recommend removal of AGL foundation from list: not the same as AGL resources
 4. Recommend the omission of NCAIS filtering--adds layer of complexity that is not required.
-5. Recommend the use of [neighboring states](https://drive.google.com/file/d/1OLYjUlQ7---EMM2ojDe5p2fJQZythIcw/view?usp=share_link) (rather than geographic distance) to describe the spatial patterns of FF foundation giving. This approach accounts for the large discrepancy in state sizes and better addresses the way in which localities funciton. 
-6. Recommend the use odds ratio to quantify the spatial/regional patterns in FF foundation giving to institutions of higher education
+5. Recommend the use of [neighboring states](https://drive.google.com/file/d/1OLYjUlQ7---EMM2ojDe5p2fJQZythIcw/view?usp=share_link) rather than geographic distance to describe the spatial patterns of FF foundation giving. This approach accounts for the large discrepancy in state sizes and better addresses the way in which localities function. 
+6. Recommend the use odds ratio to quantify the spatial/regional patterns in FF foundation giving to institutions of higher education (See results section at end)
 7. Note that family foundations tied to fossil fuel companies have different giving patterns than company foundations, even within a single family/company (e.g., Anschutz). This may be worth noting in the accompanying paper. Family foundations associated with active fossil fuel funds tend to give larger individual donations to institutions that are farther from their headquarters'. 
 8. Observe that fossil-fuel funding of academia traceable with the two variations of the FDO method used here has fallen off since peaking in 2021/22. 
 
@@ -94,7 +94,7 @@ lindsey@legupdata.com
 ## Results
 Results can be found in [`analysis.ipynb`](https://github.com/lindseygulden/foundations/blob/main/foundation/analysis.ipynb). Odds ratio provides quantitative description:
 
-### Odds ratios: Odds of grantmaker and recipient being in the same or neighboring state
+### Odds ratios: Odds of grantmaker and recipient being in the same or neighboring state (95% CI in [])
      -> tier1_research,  odds ratio = 0.6536 [0.5886,0.7256]
      -> subsidiary,  odds ratio = 2.1374 [1.8125,2.5205]
      -> corporate_foundation,  odds ratio = 3.5451 [3.1389,4.0039]
@@ -105,10 +105,11 @@ Results can be found in [`analysis.ipynb`](https://github.com/lindseygulden/foun
      -> womenonly,  odds ratio = 13.4308 [3.1713,56.8808]
 
 ### Additional figures
-[Top 25 fossil-fuel foundations, by 2024 USD granted](https://github.com/lindseygulden/foundations/blob/main/foundation/top_grantmkers_2024usd.png)
+![Top 25 fossil-fuel foundations, by 2024 USD granted](https://github.com/lindseygulden/foundations/blob/main/foundation/top_grantmkers_2024usd.png)
 
-[Individual family foundation grants are larger than other grants, regardless of institution type.](https://github.com/lindseygulden/foundations/blob/main/foundation/individual_family_foundation_grants_vs_other_types.png)
-[Grant size: family vs. non-family; 501c3 vs 501c6](https://github.com/lindseygulden/foundations/blob/main/foundation/grant_size_family_vs_nonfamily_501c3_vs_501c6.png)
+![Individual family foundation grants are larger than other grants, regardless of institution type.](https://github.com/lindseygulden/foundations/blob/main/foundation/individual_family_foundation_grants_vs_other_types.png)
+
+![Grant size: family vs. non-family; 501c3 vs 501c6](https://github.com/lindseygulden/foundations/blob/main/foundation/grant_size_family_vs_nonfamily_501c3_vs_501c6.png)
 
 
 
