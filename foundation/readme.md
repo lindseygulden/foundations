@@ -35,7 +35,7 @@ lindsey@legupdata.com
 ### Comparison of foundation results obtained with both approaches
 * A comparison of foundations identified using both methods described below can be found [here](https://docs.google.com/spreadsheets/d/1GufEfk7dL99XfDEuQVXpH9Bz0t8c7FGJ05_2NyVjtU8/edit?usp=sharing).
 * Both versions of the FDO query method (Will's and Lindsey's) resulted in the same rough temporal pattern of FF giving to universities (see Figure embedded here)
-![Comparison between methods of temporal pattern of FF foundation giving to academia](https://github.com/lindseygulden/foundations/blob/main/foundation/comparison_between_will_lindsey_method.png)
+![Comparison between methods of temporal pattern of FF foundation giving to academia](https://github.com/lindseygulden/foundations/blob/main/foundation/figs/comparison_between_will_lindsey_method.png)
 
 ### Description of steps taken:
 1. Manually assembled list of organizations, adhering as much as possible to [description provided](https://docs.google.com/document/d/1buyLjLjZS6nLiO3q-SaqRHJx-6I5pSJta8Mqd8KzyY4/edit?usp=sharing)
@@ -105,11 +105,14 @@ Results can be found in [`analysis.ipynb`](https://github.com/lindseygulden/foun
      -> womenonly,  odds ratio = 13.4308 [3.1713,56.8808]
 
 ### Additional figures
-![Top 25 fossil-fuel foundations, by 2024 USD granted](https://github.com/lindseygulden/foundations/blob/main/foundation/top_grantmkers_2024usd.png)
+* **Top grantmakers [2024 USD]**
+![Top 25 fossil-fuel foundations, by 2024 USD granted](https://github.com/lindseygulden/foundations/blob/main/foundation/figs/top_grantmkers_2024usd.png)
 
-![Individual family foundation grants are larger than other grants, regardless of institution type.](https://github.com/lindseygulden/foundations/blob/main/foundation/individual_family_foundation_grants_vs_other_types.png)
+* **Individual family foundation grants are larger than other grants, regardless of institution type.**
+![Individual family foundation grants are larger than other grants, regardless of institution type.](https://github.com/lindseygulden/foundations/blob/main/foundation/figs/individual_family_foundation_grants_vs_other_types.png)
 
-![Grant size: family vs. non-family; 501c3 vs 501c6](https://github.com/lindseygulden/foundations/blob/main/foundation/grant_size_family_vs_nonfamily_501c3_vs_501c6.png)
+* **Grant size: family vs. non-family; 501c3 vs 501c6**
+![Grant size: family vs. non-family; 501c3 vs 501c6](https://github.com/lindseygulden/foundations/blob/main/foundation/figs/grant_size_family_vs_nonfamily_501c3_vs_501c6.png)
 
 
 
