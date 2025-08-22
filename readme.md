@@ -4,7 +4,8 @@
 #### Research led by Will Katrup and Geoffrey Supran @ U. Miami's CAL
 Lindsey Gulden 08-23-25
 lindsey@legupdata.com
-
+Note that data files are stored on Google Drive (links provided inline text, below).
+Note that code for this work is in the local directory [`foundation`](https://github.com/lindseygulden/foundations/tree/main/foundation)
 ## Goals of Exploratory Analysis 
 1. Follow [written methods](https://docs.google.com/document/d/1buyLjLjZS6nLiO3q-SaqRHJx-6I5pSJta8Mqd8KzyY4/edit?usp=sharing) to roughly reproduce foundation-grant tabulation results and understand data provenance and potential limitations of methods.
 2. Link resulting grant information to information about grant recipients (i.e., schools)
